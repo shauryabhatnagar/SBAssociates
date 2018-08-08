@@ -23,9 +23,7 @@
       }
       .quote_sec{
           background: #f8f9fa;
-		  padding: 7em 0;
-		  position: relative;
-		  display: block;
+		  padding: 7em 0 !important;
       }
 
   }
