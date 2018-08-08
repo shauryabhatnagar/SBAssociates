@@ -23,4 +23,12 @@
       .quote_sec{
           background: #f8f9fa;
       }
+
+  }
+  
+  @media (max-width: 767px){
+  	  .quote_block{
+		  padding-right: 5px;
+		  padding-left: 5px;
+	  }
   }
