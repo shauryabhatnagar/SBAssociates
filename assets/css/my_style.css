@@ -2,7 +2,8 @@
   @media (min-width: 769px) {
       .pb_cover_v1 > .container > .row > .col-md-6{
           position:fixed;
-          max-width: 75%;
+          max-width: 85%;
+		  padding-right: 20px;
       } 
       .pb_cover_v1 > .container > .row > .col-md-6 > .mb-3{
           font-size: 57px;
