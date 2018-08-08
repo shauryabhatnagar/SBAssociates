@@ -1,5 +1,5 @@
       
-  @media (max-width: 767px) {
+  @media (min-width: 769px) {
       .pb_cover_v1 > .container > .row > .col-md-6{
           position:fixed;
           max-width: 75%;
