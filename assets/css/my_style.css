@@ -1,0 +1,26 @@
+      
+  @media (max-width: 767px) {
+      .pb_cover_v1 > .container > .row > .col-md-6{
+          position:fixed;
+          max-width: 75%;
+      } 
+      .pb_cover_v1 > .container > .row > .col-md-6 > .mb-3{
+          font-size: 60px;
+      } 
+      .pb_cover_v1 > .container > .row > .col-md-6 > .sub-heading{
+          max-width: 100%;
+          float: none;
+      } 
+      .pb_cover_v1 > .container > .row > .col-md-6 > .sub-heading > .mb-5{
+          font-size: 17px;
+          float: left;
+
+      }
+      .form_button{
+          margin-left: 35% !important;
+          
+      }
+      .quote_sec{
+          background: #f8f9fa;
+      }
+  }
