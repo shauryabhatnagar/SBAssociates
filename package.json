@@ -1,0 +1,31 @@
+{
+  "name": "sbassociates",
+  "version": "1.0.0",
+  "description": "SB Associates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shauryabhatnagar/SBAssociates.git"
+  },
+  "keywords": [
+    "SB",
+    "Associates",
+    "associates",
+    "best",
+    "associates",
+    "best",
+    "associates",
+    "in",
+    "delhi",
+    "ncr"
+  ],
+  "author": "Shaurya Bhatnagar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shauryabhatnagar/SBAssociates/issues"
+  },
+  "homepage": "https://github.com/shauryabhatnagar/SBAssociates#readme"
+}

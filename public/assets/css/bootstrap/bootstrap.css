@@ -155,12 +155,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #1d82ff;
+  color: #112378;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #005dd0;
+    color: #112378;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -4689,7 +4689,7 @@ a.bg-navy:focus, a.bg-navy:hover {
   background-color: transparent !important; }
 
 .border {
-  border: 1px solid #e9ecef !important; }
+  border: 1px solid #112378 !important; }
 
 .border-0 {
   border: 0 !important; }
@@ -6978,13 +6978,13 @@ a.bg-navy:focus, a.bg-navy:hover {
   color: #fff !important; }
 
 .text-primary {
-  color: #1d82ff !important; }
+  color: #112378 !important; }
 
 a.text-primary:focus, a.text-primary:hover {
   color: #0068e9 !important; }
 
 .text-secondary {
-  color: #868e96 !important; }
+  color: #112378 !important; }
 
 a.text-secondary:focus, a.text-secondary:hover {
   color: #6c757d !important; }

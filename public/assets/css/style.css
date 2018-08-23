@@ -822,7 +822,7 @@ input, select, textarea {
   background: none; }
   .pb_outline-dark:hover, .pb_outline-dark:active, .pb_outline-dark:focus {
     outline: none;
-    background: #000 !important;
+    background: #112378 !important;
     border: 1px solid black;
     color: #fff; }
 
