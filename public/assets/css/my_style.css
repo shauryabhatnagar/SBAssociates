@@ -65,6 +65,7 @@
      min-height: 1px;
  
   }
+
   .client-head{
     margin-bottom: 50px;
   }
@@ -72,6 +73,7 @@
   .heading-border-top:before{
 	background: #112378 !important;  
   }
+
   .pb_font-18{
 	  color: #112378 !important; 
   }

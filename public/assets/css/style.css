@@ -1313,7 +1313,7 @@ a {
   .pb_section.pb_bg-half:before {
     top: 50%;
     content: "";
-    background: #f8f9fa;
+    background: linear-gradient(130deg, #F7FAFC 3%, #DFEBF7 100%);
     bottom: 0%;
     width: 100%;
     left: 0;
