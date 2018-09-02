@@ -22,7 +22,7 @@ $(document).ready(function($) {
 
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+					//navbar.addClass('scrolled');	
 				}
 			} 
 			if (st < 150) {
@@ -32,7 +32,7 @@ $(document).ready(function($) {
 			} 
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					//navbar.addClass('awake');	
 				}
 				
 				if(sd.length > 0) {
