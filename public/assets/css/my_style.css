@@ -1,4 +1,12 @@
-      
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
   @media (min-width: 769px) {
       .pb_cover_v1 > .container > .row > .col-md-6{
           text-align: center;
@@ -15,7 +23,7 @@
           text-align: center;
       }
       .pb_cover_v1 > .container > .row > .col-md-6 > .sub-heading > .mb-5{ 
-          font-size: 18px;
+          font-size: 22px;
       }    
       .quote_sec{
           background: #f8f9fa;
@@ -76,6 +84,7 @@
 
   .pb_font-18{
 	  color: #112378 !important; 
+      font-weight: 600;
   }
   
   .dad-photo{

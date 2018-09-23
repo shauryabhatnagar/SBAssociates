@@ -805,7 +805,7 @@ input, select, textarea {
   padding-right: 40px; }
 
 .pb_outline-light {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   background: none;
   color: white; }
@@ -1018,7 +1018,7 @@ body {
   font-family: "Montserrat", Arial, sans-serif; }
 
 input, textarea, p {
-  font-weight: 300; }
+  font-weight: 400; }
 
 ::-moz-selection {
   background: #000;
@@ -1033,7 +1033,7 @@ input, textarea, p {
   color: #fff; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300 !important; }
+  font-weight: 500 ; }
 
 a {
   -webkit-transition: .3s all ease;
@@ -1307,6 +1307,11 @@ a {
   padding: 9em 0;
   position: relative;
   display: block; }
+.pb_section1 {
+  padding:5em 0;
+  position: relative;
+  display: block; }
+
   @media (max-width: 991px) {
     .pb_section {
       padding: 4em 0; } }
@@ -1337,8 +1342,7 @@ a {
   .images.right .img1 {
     position: relative;
     z-index: 2;
-    -webkit-box-shadow: -17px 10px 34px -18px rgba(0, 0, 0, 0.5);
-    box-shadow: -17px 10px 34px -18px rgba(0, 0, 0, 0.5); }
+    }
   .images.right .img2 {
     position: absolute;
     top: 50%;
@@ -1381,7 +1385,7 @@ a {
       color: #868e96; }
 
 .pb_footer {
-  padding: 5em 0; }
+  padding: 3em 0; }
   .pb_footer .list-unstyled li {
     margin-bottom: 10px;
     line-height: 1.5; }
@@ -1626,8 +1630,11 @@ a {
 
 .pb_media_v1 h3,
 .pb_media_v2 h3 {
-  color: #212529; }
-
+  color: #112378; font-weight: 600;} 
+.pb_media_v1 p, .pb_media_v2 p{ font-size: 14px;}
+.pb_sm_py_cover {
+    padding: 0em 0;
+}
 .pb_icon_v1 i.flaticon:before {
   font-size: 80px;
   margin: 0;
@@ -1681,8 +1688,7 @@ a {
 
 .pb_slide_v2 .slide_content {
   background: #fff;
-  -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15); }
+   }
   @media (max-width: 991px) {
     .pb_slide_v2 .slide_content > .pb_content-media {
       height: 350px; } }
@@ -1711,3 +1717,15 @@ a {
   overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+h2, h3{
+
+    font-family: 'Zilla Slab', serif;
+
+}
+
+.sub-heading, .nav-link{font-family: 'Montserrat', sans-serif;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{ color: #112378;}
+#exampleAccordion1 ul{ padding-left: 15px;}
+#exampleAccordion1 ul li{color: #333; margin-bottom: 10px; font-weight: 400;}
