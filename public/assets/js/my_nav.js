@@ -29,10 +29,18 @@ function hasScrolled() {
         jQuery('nav').removeClass('nav-down').addClass('nav-up');
     } else {
         // Scroll Up
-        if (st + jQuery(window).height() < jQuery(document).height()) {
+        if (st + jQuery(window).height() < jQuery(document).height() && st != 0) {
             jQuery('nav').removeClass('nav-up').addClass('nav-down nav-color');
         }
     }
 
     lastScrollTop = st;
 }
+
+function init() {
+var imgDefer = document.getElementsByClassName('img1');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
