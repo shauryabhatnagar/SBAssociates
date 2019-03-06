@@ -4,7 +4,9 @@
   "description": "SB Associates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "built": "webpack public/assets/js/main.js public/assets/dist/bundle.js"
+      
   },
   "repository": {
     "type": "git",
