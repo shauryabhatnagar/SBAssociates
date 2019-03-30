@@ -5691,7 +5691,7 @@ a.bg-navy:focus, a.bg-navy:hover {
     float: none !important; } }
 
 .fixed-top {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   right: 0;
   left: 0;

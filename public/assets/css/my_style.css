@@ -104,3 +104,9 @@
       max-width: 100% !important;
     }
   }
+  .nav-up {
+      top: -100px !important;
+  }
+  .nav-color{
+      background-color: rgba(7,14,47,0.5);
+  }

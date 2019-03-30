@@ -4,7 +4,9 @@
   "description": "SB Associates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "built": "webpack public/assets/js/main.js public/assets/dist/bundle.js"
+      
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/shauryabhatnagar/SBAssociates/issues"
   },
-  "homepage": "https://github.com/shauryabhatnagar/SBAssociates#readme"
+  "homepage": "https://github.com/shauryabhatnagar/SBAssociates#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6"
+  }
 }
