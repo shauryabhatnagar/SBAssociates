@@ -4,7 +4,8 @@
   "description": "SB Associates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/shauryabhatnagar/SBAssociates/issues"
   },
-  "homepage": "https://github.com/shauryabhatnagar/SBAssociates#readme"
+  "homepage": "https://github.com/shauryabhatnagar/SBAssociates#readme",
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }
