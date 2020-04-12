@@ -1,6 +1,6 @@
 $(document).ready(function ($) {
 
-    $('.gsc-control-cse').css({"border-color":"#FFFFFF00","background-color":"transparent"});	
+    $('.gsc-control-cse').css({'border-color:#FFFFFF00 !important','background-color:transparent !important'});	
     
     function loadStyleSheet(src) {
         if (document.createStyleSheet) {
