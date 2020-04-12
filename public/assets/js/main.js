@@ -1,5 +1,7 @@
 $(document).ready(function ($) {
 
+    $('.gsc-control-cse').css({"border-color":"#FFFFFF00","background-color":"transparent"});	
+    
     function loadStyleSheet(src) {
         if (document.createStyleSheet) {
             document.createStyleSheet(src);
