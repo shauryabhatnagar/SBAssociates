@@ -2993,7 +2993,7 @@ tbody.collapse.show {
 .navbar-collapse {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+  flex-basis: 76%;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
