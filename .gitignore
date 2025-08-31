@@ -36,4 +36,4 @@ logs/
 *.zip
 *.tar.gz
 
-public/assets/brochure
+public/assets/brochure/
