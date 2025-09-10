@@ -1,0 +1,2966 @@
+:root {
+    --primary: #1e3a5f;
+    --primary-light: #2c4f73;
+    --secondary: #f5f3f0;
+    --accent: #d4af37;
+    --text: #333333;
+    --text-light: #666666;
+    --text-lighter: #999999;
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-800: #1f2937;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gray-200);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+    text-decoration: none;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.brochure-link {
+    background: var(--accent);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.brochure-link:hover {
+    background: #b8941f;
+    transform: translateY(-1px);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/images/herosecsba.webp') center/cover;
+    opacity: 0.1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    color: var(--white);
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat {
+    text-align: center;
+    color: var(--white);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: #b8941f;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
+}
+
+/* About Section */
+.about {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.office-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 6rem 0;
+    background: var(--gray-50);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.service-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Practice Areas */
+.practice-areas {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.practice-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.practice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+}
+
+.practice-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.practice-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gray-50);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.practice-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.practice-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.practice-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.practice-link:hover {
+    color: #b8941f;
+}
+
+/* Team Section */
+.team {
+    padding: 6rem 0;
+    background: var(--gray-50);
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.team-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.team-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.team-title {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.team-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.credentials {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--accent);
+}
+
+.credentials-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.credentials-list {
+    list-style: none;
+}
+
+.credentials-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.credentials-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.credentials-list li:last-child {
+    border-bottom: none;
+}
+
+.team-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Clients Section */
+.clients {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.client-category-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.client-list {
+    list-style: none;
+}
+
+.client-list li {
+    padding: 0.75rem 0;
+    color: var(--text);
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 500;
+}
+
+.client-list li:last-child {
+    border-bottom: none;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section .btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.cta-section .btn-outline {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--white);
+}
+
+.cta-section .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: var(--gray-800);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.footer-description {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-list a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-list a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footer-legal a:hover {
+    opacity: 1;
+}
+
+.social-links a {
+    color: var(--white);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+.copyright {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Page Header Styles */
+.page-header {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.page-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form Functionality - Minimal additions */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.875rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    margin-top: 0.25rem;
+}
+
+.checkbox-label a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+.form-submit {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+/* Consultation Info Styling */
+.consultation-info {
+    background: var(--gray-50);
+    padding: 2rem;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.info-title {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.info-steps {
+    margin-bottom: 2rem;
+}
+
+.step {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.step-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.brochure-download {
+    border-top: 1px solid var(--gray-200);
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.brochure-download h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.brochure-download p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Active nav link */
+.nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+}
+
+/* Header stats for specific pages */
+.header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.header-stats .stat {
+    text-align: center;
+}
+
+/* Services CTA */
+.services-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-large {
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Loading animation */
+.loading {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 2rem 0;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .header-stats {
+        gap: 2rem;
+    }
+    
+    .checkbox-group {
+        align-items: flex-start;
+    }
+    
+    .step {
+        gap: 0.75rem;
+    }
+    
+    .step-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Milestones styling for about page */
+.milestones {
+    margin-top: 2rem;
+}
+
+.milestone {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.milestone-year {
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 80px;
+    font-size: 0.95rem;
+}
+
+.milestone-event {
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* Client Stats in About Section */
+.client-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Client Category Cards */
+.client-category-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+}
+
+.client-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.client-category-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+}
+
+.client-category-card .client-category-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+/* Client Logos Grid */
+.client-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.client-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.client-logo-item:hover {
+    background: var(--gray-50);
+}
+
+.client-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gray-100);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.8rem;
+    text-align: center;
+    border: 2px solid var(--gray-200);
+}
+
+.client-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Override clients-grid for new layout */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Responsive adjustments for clients page */
+@media (max-width: 768px) {
+    .client-stats {
+        gap: 1rem;
+    }
+    
+    .stat-item .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .client-logos {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .client-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 0.7rem;
+    }
+    
+    .client-name {
+        font-size: 0.8rem;
+    }
+}
+
+/* Practice Areas Dropdown Navigation Styles */
+/* Add to your existing main.css file */
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.dropdown-trigger:hover,
+.dropdown-trigger.active {
+    color: var(--primary);
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+    opacity: 0.7;
+}
+
+.dropdown-trigger.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+    background: var(--gray-50);
+    color: var(--primary);
+    border-left-color: var(--accent);
+}
+
+.dropdown-item.main-link {
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--gray-50);
+}
+
+.dropdown-item.main-link:hover {
+    background: var(--gray-100);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: var(--gray-200);
+    margin: 0.5rem 0;
+}
+
+/* Mobile dropdown styles */
+@media (max-width: 768px) {
+    .nav-dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        background: var(--gray-50);
+        margin-top: 0.5rem;
+        padding: 0;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .dropdown-menu.show {
+        max-height: 400px;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-left: none;
+        border-bottom: 1px solid var(--gray-200);
+    }
+    
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+    
+    .dropdown-trigger {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.75rem 0;
+    }
+}
+
+/* Enhanced navbar for dropdown compatibility */
+.navbar .nav-list {
+    position: relative;
+}
+
+/* Ensure proper z-index for dropdown */
+.navbar {
+    z-index: 1001;
+}
+
+/* Active state for dropdown parent */
+.nav-dropdown .dropdown-trigger.active {
+    color: var(--primary);
+}
+
+/* Smooth animations */
+.dropdown-menu {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.dropdown-menu.show {
+    animation-name: slideDown;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Focus states for accessibility */
+.dropdown-trigger:focus,
+.dropdown-item:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Hover effects for better UX */
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Prevent dropdown from being cut off */
+.container {
+    position: relative;
+}
+
+/* Additional CSS for Corporate Law and Enhanced Practice Area Pages */
+
+/* Enhanced Practice Card Badges */
+.practice-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.practice-card.featured .practice-badge {
+    background: var(--primary);
+}
+
+/* Enhanced Practice Header */
+.practice-header {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Practice Specialties Styling */
+.practice-specialties {
+    background: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--accent);
+}
+
+.practice-specialties h4 {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.practice-specialties ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.practice-specialties ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.practice-specialties ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    top: 0.4rem;
+}
+
+.practice-specialties ul li:last-child {
+    border-bottom: none;
+}
+
+/* Enhanced Grid Layout for Corporate Page */
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Featured Practice Cards Enhancement */
+.practice-card.featured {
+    border: 2px solid var(--accent);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.1);
+}
+
+.practice-card.featured:hover {
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.15);
+    border-color: var(--primary);
+}
+
+/* Process Steps Enhancement */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Advantages Grid - 2x3 Flexbox Layout */
+.advantages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    justify-content: flex-start;
+}
+
+.advantages-grid .advantage-item {
+    flex: 0 0 calc(33.333% - 1rem);
+    min-width: 0;
+    max-width: calc(33.333% - 1rem);
+    width: calc(33.333% - 1rem);
+}
+
+/* General .advantages-grid rule now handles all cases consistently */
+
+.process-step {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.process-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    border-radius: 2px;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.2);
+}
+
+.step-content h3 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.step-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Industry Icons Enhancement */
+.advantage-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.advantage-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.2);
+}
+
+.advantage-item h3 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.advantage-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Enhanced Header Stats */
+.header-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.header-stats .stat {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+}
+
+/* Smooth Animations */
+.practice-card,
+.process-step,
+.advantage-item {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.practice-card.loading,
+.process-step.loading,
+.advantage-item.loading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .practices-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .header-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .advantages-grid {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .advantages-grid .advantage-item {
+        flex: 0 0 calc(50% - 0.75rem);
+        min-width: 0;
+        width: calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+    
+    .header-stats {
+        gap: 1.5rem;
+    }
+    
+    .header-stats .stat {
+        min-width: 100px;
+        padding: 0.75rem;
+    }
+    
+    .practice-specialties {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .advantage-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .practices-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantages-grid {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+    
+    .advantages-grid .advantage-item {
+        flex: 0 0 100%;
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .process-step {
+        padding: 1.5rem 1rem;
+    }
+    
+    .advantage-item {
+        padding: 1.5rem;
+    }
+    
+    .header-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .practice-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+    
+    .page-header {
+        background: none !important;
+        color: var(--text) !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .practice-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--gray-300);
+        margin-bottom: 1rem;
+    }
+}
+
+/* Accessibility Enhancements */
+.practice-card:focus-within,
+.process-step:focus-within,
+.advantage-item:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+    .practice-badge {
+        border: 2px solid var(--text);
+    }
+    
+    .practice-specialties {
+        border-left-width: 6px;
+    }
+    
+    .step-number {
+        border: 3px solid var(--white);
+    }
+}
+
+/* Credentials Section Styling */
+.adr-credentials {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+}
+
+/* ADR Credentials - No specific grid overrides needed, uses general .advantages-grid */
+
+.credential-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.credential-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.credential-item:hover::before {
+    transform: translateX(0);
+}
+
+.credential-item .advantage-icon {
+    background: linear-gradient(135deg, var(--accent), #b8941f);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ADR Advantages Section */
+.adr-advantages .process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.advantage-step {
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.advantage-step::before {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    height: 3px;
+}
+
+.advantage-step .step-number {
+    background: var(--white);
+    border: 3px solid var(--primary);
+    color: var(--primary);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(30, 58, 95, 0.1);
+}
+
+.advantage-step:hover .step-number {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Court-Connected ADR Programs */
+.adr-programs {
+    background: var(--gray-50);
+}
+
+.adr-programs .client-category {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.adr-programs .client-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--primary);
+}
+
+.adr-programs .client-category-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.adr-programs .client-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.adr-programs .client-category:hover .client-category-title::after {
+    width: 60%;
+}
+
+.adr-programs .client-list li {
+    padding: 0.75rem 0;
+    color: var(--text);
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 500;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.adr-programs .client-list li::before {
+    content: '⚖';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1rem;
+    top: 0.7rem;
+}
+
+.adr-programs .client-list li:hover {
+    color: var(--primary);
+    padding-left: 2rem;
+    background: var(--gray-50);
+}
+
+/* Enhanced Header Stats for ADR */
+.page-header .header-stats .stat {
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.page-header .header-stats .stat-number {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.page-header .header-stats .stat-label {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* ADR Process Timeline Effect */
+.adr-advantages .process-steps .process-step {
+    position: relative;
+}
+
+.adr-advantages .process-steps .process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -1.25rem;
+    width: 2.5rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Responsive Adjustments for ADR Page */
+@media (max-width: 1024px) {
+    .adr-advantages .process-steps {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    .adr-advantages .process-steps .process-step::after {
+        display: none;
+    }
+}
+
+
+/* ADR responsive rules removed - using general .advantages-grid responsive behavior */
+    
+    .advantage-step .step-number {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+    
+    .adr-programs .client-category {
+        padding: 1.5rem;
+    }
+    
+    .page-header .header-stats {
+        gap: 1rem;
+    }
+    
+    .page-header .header-stats .stat {
+        min-width: 90px;
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adr-advantages .process-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .advantage-step {
+        padding: 1.5rem 1rem;
+    }
+    
+    .credential-item .advantage-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Enhanced Focus States for ADR Page */
+.credential-item:focus-within,
+.advantage-step:focus-within,
+.adr-programs .client-category:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* Print Styles for ADR Page */
+@media print {
+    .adr-credentials,
+    .adr-advantages,
+    .adr-programs {
+        background: white !important;
+    }
+    
+    .credential-item,
+    .advantage-step,
+    .adr-programs .client-category {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid var(--gray-300) !important;
+    }
+}
+
+/* Family & Consumer Law Page Specific Styles - Add to main.css */
+
+/* Family & Consumer Law Overview Enhancements */
+.family-consumer-specific {
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.family-consumer-specific::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+/* Service Areas Grid Styling */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-area-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.service-area-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.service-area-card:hover::before {
+    transform: translateX(0);
+}
+
+/* Specific card focus colors */
+.matrimonial-focus:hover {
+    border-color: #e91e63;
+}
+
+.matrimonial-focus::before {
+    background: #e91e63;
+}
+
+.custody-focus:hover {
+    border-color: #2196f3;
+}
+
+.custody-focus::before {
+    background: #2196f3;
+}
+
+.financial-focus:hover {
+    border-color: #4caf50;
+}
+
+.financial-focus::before {
+    background: #4caf50;
+}
+
+.protection-focus:hover {
+    border-color: #ff9800;
+}
+
+.protection-focus::before {
+    background: #ff9800;
+}
+
+/* Service Features Styling */
+.service-features ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.service-features ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.service-features ul li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    top: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.service-features ul li:hover {
+    color: var(--primary);
+    padding-left: 2rem;
+}
+
+.service-features ul li:hover:before {
+    transform: translateX(0.5rem);
+}
+
+.service-features ul li:last-child {
+    border-bottom: none;
+}
+
+/* Consumer Services Section */
+.consumer-services {
+    background: var(--gray-50);
+    padding: 6rem 0;
+}
+
+/* Consumer Highlights Achievement */
+.consumer-highlights {
+    margin-bottom: 4rem;
+}
+
+.highlight-achievement {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-achievement::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.achievement-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-case {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.achievement-description {
+    opacity: 0.85;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Consumer Services Grid */
+.consumer-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.consumer-service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.consumer-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.reputation-focus {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, var(--white) 0%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+/* Forum Badges */
+.forum-levels {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.forum-badge {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Service Sectors and Types */
+.service-sectors ul,
+.liability-types ul,
+.protection-services ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.service-sectors ul li,
+.liability-types ul li,
+.protection-services ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.service-sectors ul li:before,
+.liability-types ul li:before,
+.protection-services ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    top: 0.5rem;
+}
+
+.service-sectors ul li:last-child,
+.liability-types ul li:last-child,
+.protection-services ul li:last-child {
+    border-bottom: none;
+}
+
+/* Process Timeline */
+.family-consumer-process {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--primary));
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-step {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-step:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.step-marker {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: var(--white);
+    border: 4px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.step-marker .step-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.timeline-step:hover .step-marker {
+    background: var(--accent);
+    border-color: var(--primary);
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover .step-marker .step-number {
+    color: var(--white);
+}
+
+.step-content {
+    flex: 1;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover .step-content {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.step-content h3 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Family Consumer Advantages */
+.family-consumer-advantages {
+    padding: 6rem 0;
+    background: var(--gray-50);
+}
+
+/* family-consumer-advantages now uses general .advantages-grid flexbox rules for consistency */
+
+.family-consumer-advantages .advantage-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.family-consumer-advantages .advantage-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.family-consumer-advantages .advantage-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.family-consumer-advantages .advantage-item:hover::before {
+    transform: scaleX(1);
+}
+
+/* CTA Section Enhancement */
+.consultation-note {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.consultation-note small {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Family & Consumer Page */
+@media (max-width: 1024px) {
+    .highlight-achievement {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .achievement-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .consumer-services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-area-card {
+        padding: 1.5rem;
+    }
+    
+    /* Timeline adjustments for mobile */
+    .process-timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-step {
+        flex-direction: row !important;
+    }
+    
+    .timeline-step:nth-child(even) {
+        flex-direction: row !important;
+    }
+    
+    .step-marker {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+    }
+    
+    .step-marker .step-number {
+        font-size: 1.2rem;
+    }
+    
+    .step-content {
+        margin: 0 0 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .highlight-achievement {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .achievement-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .achievement-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .forum-levels {
+        justify-content: center;
+    }
+    
+    .consumer-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* family-consumer-advantages uses general responsive .advantages-grid rules */
+}
+
+@media (max-width: 480px) {
+    .service-area-card {
+        padding: 1rem;
+    }
+    
+    .step-content {
+        padding: 1rem;
+    }
+    
+    .step-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .consumer-service-card {
+        padding: 1.5rem;
+    }
+    
+    .family-consumer-advantages .advantage-item {
+        padding: 1.5rem;
+    }
+    
+    .highlight-achievement {
+        padding: 1rem;
+    }
+    
+    .achievement-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .achievement-case {
+        font-size: 1rem;
+    }
+}
+
+/* Print Styles for Family & Consumer Page */
+@media print {
+    .family-consumer-process,
+    .consumer-services,
+    .family-consumer-advantages {
+        background: white !important;
+    }
+    
+    .service-area-card,
+    .consumer-service-card,
+    .timeline-step .step-content {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid var(--gray-300) !important;
+    }
+    
+    .highlight-achievement {
+        background: var(--gray-100) !important;
+        color: var(--text) !important;
+    }
+}
+
+/* Accessibility Enhancements */
+.service-area-card:focus-within,
+.consumer-service-card:focus-within,
+.timeline-step:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+    .forum-badge {
+        border: 2px solid var(--white);
+    }
+    
+    .step-marker {
+        border-width: 6px;
+    }
+    
+    .service-area-card::before {
+        height: 6px;
+    }
+}
+
+/* Animation Delays for Progressive Enhancement */
+.service-area-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.service-area-card.loading {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-step {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s ease;
+}
+
+.timeline-step:nth-child(even) {
+    transform: translateX(0);
+}
+
+.timeline-step.loading {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Property & Banking Law Page Specific Styles */
+
+/* Property Services Section */
+.property-services {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.property-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.property-services .service-area-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+    visibility: visible;
+}
+
+.property-services .service-area-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-services .service-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gray-50);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.property-services .service-title {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.property-services .service-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.property-services .service-features {
+    display: block;
+    visibility: visible;
+}
+
+/* Banking Services Section */
+.banking-services {
+    padding: 6rem 0;
+    background: var(--gray-50);
+}
+
+.banking-highlight {
+    margin-bottom: 4rem;
+}
+
+.banking-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.banking-service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+
+.banking-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.banking-service-card.security-enforcement {
+    border-left: 4px solid var(--primary);
+    background: linear-gradient(135deg, var(--white) 0%, rgba(30, 58, 95, 0.02) 100%);
+}
+
+.banking-service-card.property-recovery {
+    border-left: 4px solid var(--accent);
+    background: linear-gradient(135deg, var(--white) 0%, rgba(212, 175, 55, 0.02) 100%);
+}
+
+.banking-service-card.land-acquisition {
+    border-left: 4px solid var(--primary-light);
+    background: linear-gradient(135deg, var(--white) 0%, rgba(44, 79, 115, 0.02) 100%);
+}
+
+/* Enforcement Methods */
+.enforcement-methods,
+.recovery-process,
+.acquisition-services {
+    background: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--accent);
+}
+
+.enforcement-methods h4,
+.recovery-process h4,
+.acquisition-services h4 {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.enforcement-methods ul,
+.recovery-process ul,
+.acquisition-services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.enforcement-methods ul li,
+.recovery-process ul li,
+.acquisition-services ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.enforcement-methods ul li:before,
+.recovery-process ul li:before,
+.acquisition-services ul li:before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1rem;
+    top: 0.5rem;
+}
+
+.enforcement-methods ul li:last-child,
+.recovery-process ul li:last-child,
+.acquisition-services ul li:last-child {
+    border-bottom: none;
+}
+
+/* Property Process Section */
+.property-process {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+/* Property Advantages Section */
+.property-advantages {
+    padding: 6rem 0;
+    background: var(--gray-50);
+}
+
+/* property-advantages now uses general .advantages-grid flexbox rules for consistency */
+
+/* Family Services Section */
+.family-services {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+/* Overview Content Enhancement */
+.overview-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.overview-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.section-description {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .banking-services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .banking-service-card {
+        padding: 1.5rem;
+    }
+    
+    .enforcement-methods,
+    .recovery-process,
+    .acquisition-services {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    /* property-advantages uses general responsive .advantages-grid rules */
+}
+
+@media (max-width: 480px) {
+    .banking-service-card {
+        padding: 1rem;
+    }
+    
+    .property-services,
+    .banking-services,
+    .property-process,
+    .property-advantages {
+        padding: 4rem 0;
+    }
+}

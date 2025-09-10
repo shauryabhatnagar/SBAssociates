@@ -1,20 +1,58 @@
 {
 	"hosting": {
-		"public": "public",
-		"ignore": ["firebase.json", "**/.*", "**/node_modules/**", "firebase-debug.log",".zshrc"],
-		"rewrites": [
-			{
-				"source": "**",
-				"destination": "/index.html"
-			}
-		],
-		"headers": [
-			{
-			  "source": "**/*.pdf",
-			  "headers": [
-				{ "key": "Content-Type", "value": "application/pdf" }
-			  ]
-			}
+	  "public": "public",
+	  "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "README.md"],
+	  "headers": [
+		{
+		  "source": "**/*.pdf",
+		  "headers": [
+			{"key": "Content-Type", "value": "application/pdf"},
+			{"key": "Content-Disposition", "value": "inline"},
+			{"key": "Cache-Control", "value": "max-age=3600"}
 		  ]
+		},
+		{
+		  "source": "**/*.@(webp|jpg|jpeg|png|gif|ico)",
+		  "headers": [
+			{"key": "Cache-Control", "value": "max-age=31536000"},
+			{"key": "Vary", "value": "Accept"}
+		  ]
+		},
+		{
+		  "source": "**/*.@(css|js)",
+		  "headers": [
+			{"key": "Cache-Control", "value": "max-age=604800"}
+		  ]
+		},
+		{
+		  "source": "**/*.html",
+		  "headers": [
+			{"key": "Cache-Control", "value": "max-age=300"},
+			{"key": "X-Content-Type-Options", "value": "nosniff"},
+			{"key": "X-Frame-Options", "value": "DENY"},
+			{"key": "X-XSS-Protection", "value": "1; mode=block"},
+			{"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"}
+		  ]
+		}
+	  ],
+	  "cleanUrls": true,
+	  "trailingSlash": false,
+	  "redirects": [
+		{
+		  "source": "/practice-areas/adr",
+		  "destination": "/practice-areas/arbitration",
+		  "type": 301
+		},
+		{
+		  "source": "/practice-areas/banking",
+		  "destination": "/practice-areas/property-banking",
+		  "type": 301
+		},
+		{
+		  "source": "/practice-areas/family",
+		  "destination": "/practice-areas/family-consumer",
+		  "type": 301
+		}
+	  ]
 	}
 }
