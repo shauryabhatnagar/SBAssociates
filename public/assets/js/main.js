@@ -410,17 +410,15 @@ function safeElementOperation(selector, operation) {
     }
 }
 
-// Practice Areas Dropdown Functionality
+// Nav Dropdowns
 document.addEventListener('DOMContentLoaded', () => {
-    // Create dropdown functionality for Practice Areas
     initializePracticeAreasDropdown();
+    initializeLandmarkCasesDropdown();
 });
 
 function initializePracticeAreasDropdown() {
     const practiceAreasLink = document.querySelector('.nav-link[href*="practice-areas"]');
-    
     if (practiceAreasLink) {
-        // Create dropdown structure
         const dropdownHTML = `
             <div class="nav-dropdown">
                 <a href="/practice-areas/" class="nav-link dropdown-trigger">
@@ -432,53 +430,92 @@ function initializePracticeAreasDropdown() {
                 <div class="dropdown-menu">
                     <a href="/practice-areas/" class="dropdown-item main-link">All Practice Areas</a>
                     <div class="dropdown-divider"></div>
-                    <a href="/practice-areas/arbitration" class="dropdown-item">Arbitration & ADR</a>               
-                    <a href="/practice-areas/litigation" class="dropdown-item">Civil & Criminal Litigation</a>
-                    <a href="/practice-areas/corporate-law" class="dropdown-item">Corporate & Commercial Law</a>
-                    <a href="/practice-areas/family-consumer" class="dropdown-item">Family & Consumer Law</a>
-                    <a href="/practice-areas/property-banking" class="dropdown-item">Property & Banking Law</a>
+                    <a href="/practice-areas/arbitration" class="dropdown-item">Arbitration &amp; ADR</a>
+                    <a href="/practice-areas/litigation" class="dropdown-item">Civil &amp; Criminal Litigation</a>
+                    <a href="/practice-areas/corporate-law" class="dropdown-item">Corporate &amp; Commercial Law</a>
+                    <a href="/practice-areas/family-consumer" class="dropdown-item">Family &amp; Consumer Law</a>
+                    <a href="/practice-areas/property-banking" class="dropdown-item">Property &amp; Banking Law</a>
                 </div>
             </div>
         `;
-        
-        // Replace the existing practice areas link with dropdown
         const parentLi = practiceAreasLink.parentElement;
         parentLi.innerHTML = dropdownHTML;
-        
-        // Add dropdown event listeners
-        const dropdown = parentLi.querySelector('.nav-dropdown');
-        const trigger = dropdown.querySelector('.dropdown-trigger');
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        // Show dropdown on hover
-        dropdown.addEventListener('mouseenter', () => {
+        setupNavDropdown(parentLi);
+    }
+}
+
+function initializeLandmarkCasesDropdown() {
+    const landmarkLink = document.querySelector('.nav-link[href*="landmark-cases"], .nav-link[href="/#landmark-cases"]');
+    if (landmarkLink) {
+        const dropdownHTML = `
+            <div class="nav-dropdown">
+                <a href="/#landmark-cases" class="nav-link dropdown-trigger">
+                    Landmark Cases
+                    <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="/#landmark-cases" class="dropdown-item main-link">All Cases</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/landmark-cases/hyundai-vs-bhatnagar" class="dropdown-item">Hyundai v. Bhatnagar</a>
+                    <a href="/landmark-cases/air-india-consumer" class="dropdown-item">Consumer Dispute: Air India</a>
+                    <a href="/landmark-cases/public-infrastructure-civic" class="dropdown-item">AIIMS Civic Matter</a>
+                    <a href="/landmark-cases/heritage-protection" class="dropdown-item">Heritage Protection Matter</a>
+                </div>
+            </div>
+        `;
+        const parentLi = landmarkLink.parentElement;
+        parentLi.innerHTML = dropdownHTML;
+        setupNavDropdown(parentLi);
+    }
+}
+
+function setupNavDropdown(parentLi) {
+    const dropdown = parentLi.querySelector('.nav-dropdown');
+    const trigger = dropdown.querySelector('.dropdown-trigger');
+    const menu = dropdown.querySelector('.dropdown-menu');
+
+    // Desktop: show on hover
+    dropdown.addEventListener('mouseenter', () => {
+        menu.classList.add('show');
+        trigger.classList.add('active');
+    });
+    dropdown.addEventListener('mouseleave', () => {
+        menu.classList.remove('show');
+        trigger.classList.remove('active');
+    });
+
+    // All screen sizes: click toggles the dropdown
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = menu.classList.contains('show');
+        // Close all other open dropdowns first
+        document.querySelectorAll('.dropdown-menu.show').forEach(m => m.classList.remove('show'));
+        document.querySelectorAll('.dropdown-trigger.active').forEach(t => t.classList.remove('active'));
+        if (!isOpen) {
             menu.classList.add('show');
             trigger.classList.add('active');
-        });
-        
-        // Hide dropdown on mouse leave
-        dropdown.addEventListener('mouseleave', () => {
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            menu.classList.remove('show');
+            trigger.classList.remove('active');
+        }
+    });
+
+    // Close dropdown items close the mobile menu too
+    menu.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const navMenu = document.getElementById('nav-menu');
+            if (navMenu) navMenu.classList.remove('active');
             menu.classList.remove('show');
             trigger.classList.remove('active');
         });
-        
-        // Handle mobile touch events
-        trigger.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                menu.classList.toggle('show');
-                trigger.classList.toggle('active');
-            }
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!dropdown.contains(e.target)) {
-                menu.classList.remove('show');
-                trigger.classList.remove('active');
-            }
-        });
-    }
+    });
 }
 
 // Update mobile menu close functionality to handle dropdowns
