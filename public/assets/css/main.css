@@ -3327,11 +3327,27 @@ html {
     display: block;
 }
 
-/* Per-card placeholder tones */
-.case-img--sc    { background: linear-gradient(160deg, #1c2e45 0%, #2c4f73 100%); }
-.case-img--air   { background: linear-gradient(160deg, #8b1a1a 0%, #c0392b 100%); }
-.case-img--civic { background: linear-gradient(160deg, #1a3d30 0%, #27ae60 60%, #145a32 100%); }
-.case-img--heri  { background: linear-gradient(160deg, #5c3d11 0%, #d4af37 100%); }
+/* Per-card placeholder tones — photo + colour overlay */
+.case-img--sc {
+    background:
+        linear-gradient(160deg, rgba(28,46,69,0.72) 0%, rgba(44,79,115,0.68) 100%),
+        url('/assets/images/hyundai-home.webp') center/cover no-repeat;
+}
+.case-img--air {
+    background:
+        linear-gradient(160deg, rgba(139,26,26,0.72) 0%, rgba(192,57,43,0.68) 100%),
+        url('/assets/images/air-india-home.webp') center/cover no-repeat;
+}
+.case-img--civic {
+    background:
+        linear-gradient(160deg, rgba(26,61,48,0.72) 0%, rgba(39,174,96,0.60) 60%, rgba(20,90,50,0.72) 100%),
+        url('/assets/images/aiims.webp') center/cover no-repeat;
+}
+.case-img--heri {
+    background:
+        linear-gradient(160deg, rgba(92,61,17,0.72) 0%, rgba(212,175,55,0.60) 100%),
+        url('/assets/images/heritage.webp') center/cover no-repeat;
+}
 
 /* Court icon badge over image */
 .case-court-badge {
