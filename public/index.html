@@ -36,12 +36,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="SB & Associates - Leading law firm in New Delhi with 30+ years experience. Expert legal services in corporate law, litigation, arbitration, and debt recovery. Supreme Court representation.">
+        content="SB & Associates — Advocates & Legal Consultants in New Delhi with 30+ years of experience. Expert legal services in corporate law, litigation, arbitration, property, and debt recovery. Supreme Court and Delhi High Court representation.">
     <meta name="keywords"
-        content="law firm Delhi, corporate lawyer Delhi, Supreme Court advocate, litigation Delhi, debt recovery">
+        content="advocate Delhi, lawyer Delhi, law firm Delhi, south Delhi advocate, Green Park advocate, corporate lawyer Delhi, Supreme Court advocate Delhi, litigation lawyer Delhi, legal consultation Delhi, Delhi NCR lawyer, advocate New Delhi, best lawyer south Delhi">
     <meta name="google-site-verification" content="l5eNwLC1OdAt1TEqjpBrjryPo-uae8JYuKu3enYJ7dE">
 
-    <title>SB & Associates - Premier Law Firm in New Delhi | Corporate & Litigation Experts</title>
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="IN-DL">
+    <meta name="geo.placename" content="New Delhi, India">
+    <meta name="geo.position" content="28.5626;77.2057">
+    <meta name="ICBM" content="28.5626, 77.2057">
+
+    <title>SB & Associates — Advocates & Legal Consultants, New Delhi | 30+ Years</title>
+
+    <link rel="canonical" href="https://sbassociates.in/">
+    <link rel="alternate" hreflang="en-IN" href="https://sbassociates.in/">
+    <link rel="alternate" hreflang="x-default" href="https://sbassociates.in/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sbassociates.in/">
+    <meta property="og:title" content="SB & Associates — Advocates & Legal Consultants, New Delhi">
+    <meta property="og:description" content="Full-service law firm in New Delhi with 30+ years of experience. Supreme Court, Delhi High Court, and all District Courts. Corporate law, litigation, arbitration, property and family matters.">
+    <meta property="og:image" content="https://sbassociates.in/assets/images/logo-512.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SB & Associates — Advocates & Legal Consultants, New Delhi">
+    <meta name="twitter:description" content="Full-service law firm in New Delhi with 30+ years of experience. Corporate law, litigation, arbitration, property and family matters.">
+    <meta name="twitter:image" content="https://sbassociates.in/assets/images/logo-512.webp">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="SB &amp; Associates">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
@@ -58,14 +81,14 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup: LegalService / LocalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LegalService",
+        "@type": ["LegalService", "LocalBusiness"],
         "name": "SB & Associates",
-        "alternateName": "SB and Associates Law Firm",
-        "description": "Full-service law firm in New Delhi providing corporate, civil, criminal, and regulatory legal services with over 30 years of experience.",
+        "alternateName": ["SB and Associates", "SB and Associates Law Firm", "SB Associates Advocates"],
+        "description": "Full-service advocates and legal consultants in New Delhi providing corporate, civil, criminal, and regulatory legal services with over 30 years of experience. Appearing before the Supreme Court of India, Delhi High Court, and all District Courts.",
         "url": "https://sbassociates.in",
         "telephone": "+91-98111-01476",
         "email": "shailendra@sbassociates.in",
@@ -92,23 +115,78 @@
             "@type": "Person",
             "name": "Shailendra Bhatnagar",
             "jobTitle": "Senior Advocate",
-            "alumniOf": "Delhi University"
+            "alumniOf": "Delhi University",
+            "memberOf": "Bar Council of Delhi"
         },
-        "serviceArea": {
-            "@type": "Place",
-            "name": "Delhi NCR, India"
-        },
+        "areaServed": [
+            {"@type": "City", "name": "New Delhi"},
+            {"@type": "City", "name": "Delhi"},
+            {"@type": "AdministrativeArea", "name": "Delhi NCR"},
+            {"@type": "AdministrativeArea", "name": "South Delhi"},
+            {"@type": "Neighborhood", "name": "Green Park Extension"}
+        ],
+        "serviceType": ["Corporate Law", "Civil Litigation", "Criminal Law", "Arbitration", "Alternative Dispute Resolution", "Property Law", "Banking Law", "Family Law", "Consumer Law", "Insolvency & Bankruptcy"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Legal Services",
             "itemListElement": [
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Law"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Civil Litigation"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Criminal Law"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arbitration"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bankruptcy & Insolvency"}}
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate & Commercial Law", "description": "Company formation, M&A, contracts, compliance and cross-border investments"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Civil & Criminal Litigation", "description": "Supreme Court and High Court representation, commercial disputes, criminal defense"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Arbitration & ADR", "description": "DIAC-appointed arbitration, mediation and conciliation services"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Property & Banking Law", "description": "Real estate disputes, title verification, SARFAESI enforcement, debt recovery"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Family & Consumer Law", "description": "Matrimonial disputes, divorce, child custody, consumer protection"}}
             ]
         }
+    }
+    </script>
+
+    <!-- Schema Markup: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What types of legal cases does SB & Associates handle in Delhi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SB & Associates handles corporate & commercial law, civil and criminal litigation, arbitration and ADR, property & banking law, family law, consumer disputes, insolvency and bankruptcy matters. The firm appears before the Supreme Court of India, Delhi High Court, and all District Courts across Delhi NCR."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is SB & Associates law firm located in Delhi?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SB & Associates is located at U-20, Green Park Extension, New Delhi – 110016. The firm serves clients across South Delhi, Delhi NCR, and handles matters nationwide in the Supreme Court of India."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many years of experience does SB & Associates have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SB & Associates was founded by Mr. Shailendra Bhatnagar, a senior advocate enrolled with the Bar Council of Delhi since 1993. The firm has over 30 years of experience in legal practice across corporate, civil, criminal, and regulatory matters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can SB & Associates represent clients before the Supreme Court of India?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. SB & Associates regularly appears before the Supreme Court of India, Delhi High Court, the National Company Law Tribunal (NCLT), and all Delhi District Courts. The firm has successfully represented clients in landmark Supreme Court judgments."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I schedule a legal consultation with SB & Associates?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can contact SB & Associates at +91 98111 01476 or email shailendra@sbassociates.in. The office is open Monday to Saturday, 10 AM to 7 PM. You can also fill out the consultation request form on the Contact page at sbassociates.in/contact."
+                }
+            }
+        ]
     }
     </script>
 </head>
@@ -262,7 +340,7 @@
                     <a href="about" class="btn btn-primary">Meet Our Team</a>
                 </div>
                 <div class="about-image">
-                    <img src="assets/images/office.webp" alt="SB Associates Office" class="office-image">
+                    <img src="assets/images/office.webp" alt="SB &amp; Associates Law Firm Office, Green Park New Delhi" class="office-image">
                 </div>
             </div>
         </div>

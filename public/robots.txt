@@ -1,21 +1,6 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://sbassociates.in/sitemap.xml
 
-# Allow crawling of important pages
-Allow: /about
-Allow: /contact
-Allow: /clients
-Allow: /practice-areas/
-
-# Allow crawling of assets
-Allow: /assets/
-
-# Disallow admin or sensitive areas (if any)
 Disallow: /admin/
-Disallow: /*.pdf$
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
