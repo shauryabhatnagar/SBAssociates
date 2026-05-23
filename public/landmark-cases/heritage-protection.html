@@ -38,8 +38,12 @@
         </div>
     </nav>
 
-    <header class="page-header">
-        <div class="container">
+    <header class="page-header" style="position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;z-index:0;">
+            <img src="../assets/images/heritage.webp" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+            <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,46,78,0.78) 0%,rgba(30,58,95,0.74) 100%);"></div>
+        </div>
+        <div class="container" style="position:relative;z-index:1;">
             <div class="page-header-content">
                 <div class="breadcrumb">
                     <a href="/">Home</a> &rsaquo; <a href="/#landmark-cases">Landmark Cases</a> &rsaquo; Heritage Protection Matter
@@ -95,7 +99,7 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="../assets/images/heritage.webp" alt="Heritage protection — illegal construction near protected monument" style="width:100%;height:360px;object-fit:cover;object-position:center;border-radius:12px;box-shadow:var(--shadow-lg);display:block;">
+                    <img src="../assets/images/heritage-case-card.svg" alt="Case summary — Heritage Protection & Illegal Construction Matter" style="width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow-lg);display:block;">
                 </div>
             </div>
         </div>
