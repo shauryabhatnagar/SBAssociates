@@ -1,5 +1,0 @@
-User-agent: *
-# CSS, JS, Images
-Allow: /
-Disallow: /terms.html
-Disallow: /privacy.html
