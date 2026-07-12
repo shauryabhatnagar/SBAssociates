@@ -24,7 +24,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert corporate and commercial law services by SB & Associates Delhi. Company formation, M&A, compliance, commercial contracts, banking finance, and cross-border investments with 30+ years experience.">
+    <meta name="description" content="Corporate and commercial law practice at SB & Associates, New Delhi — company formation, commercial contracts, M&A, IBC and insolvency matters, compliance, and banking finance for businesses across Delhi NCR and India.">
     <meta name="keywords" content="corporate lawyer Delhi, commercial law firm, company formation Delhi, M&A advisory, business compliance, contract drafting, banking finance law">
     
     <!-- Geo / Local SEO -->
@@ -34,8 +34,8 @@
     <meta name="ICBM" content="28.5626, 77.2057">
 
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Corporate & Commercial Law Services - SB & Associates Delhi">
-    <meta property="og:description" content="Comprehensive corporate legal services including company formation, M&A, compliance, commercial contracts, and cross-border investment advisory with proven expertise in Delhi NCR.">
+    <meta property="og:title" content="Corporate & Commercial Lawyers in Delhi — IBC, Contracts & M&A | SB & Associates">
+    <meta property="og:description" content="Corporate and commercial law practice at SB & Associates, New Delhi — company formation, commercial contracts, M&A, IBC and insolvency matters, compliance, and banking finance for businesses across Delhi NCR and India.">
     <meta property="og:url" content="https://sbassociates.in/practice-areas/corporate-law">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sbassociates.in/assets/images/office.webp">
@@ -48,7 +48,7 @@
     <link rel="alternate" hreflang="en-IN" href="https://sbassociates.in/practice-areas/corporate-law">
     <link rel="alternate" hreflang="x-default" href="https://sbassociates.in/practice-areas/corporate-law">
     
-    <title>Corporate & Commercial Law Services | SB & Associates Delhi</title>
+    <title>Corporate & Commercial Lawyers in Delhi — IBC, Contracts & M&A | SB & Associates</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/images/logo.ico">
@@ -100,9 +100,57 @@
                 "addressCountry": "IN"
             }
         },
-        "serviceType": "Corporate Legal Services",
-        "areaServed": "Delhi NCR, India",
+        "serviceType": ["Corporate Law", "Commercial Law", "IBC & Insolvency", "Mergers & Acquisitions", "Commercial Contracts"],
+        "areaServed": [
+            { "@type": "City", "name": "New Delhi" },
+            { "@type": "City", "name": "Delhi" },
+            { "@type": "AdministrativeArea", "name": "Delhi NCR" },
+            { "@type": "AdministrativeArea", "name": "South Delhi" },
+            { "@type": "Neighborhood", "name": "Green Park Extension" },
+            { "@type": "Country", "name": "India" }
+        ],
         "description": "Comprehensive corporate and commercial legal services including company formation, M&A, compliance, contracts, and cross-border investment advisory."
+    }
+    </script>
+    <!-- Schema Markup: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Insolvency and Bankruptcy Code and when does it apply?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The IBC, 2016 provides a time-bound process for resolving corporate insolvency. When a company defaults on a debt of ₹1 crore or more, financial or operational creditors may initiate proceedings before the NCLT. Admission triggers a moratorium and a resolution process that ends in either a revival plan or liquidation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What should a shareholders' agreement cover?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Board composition and governance rights, restrictions on share transfers, exit mechanisms, protections for minority shareholders, deadlock resolution, and a clear dispute-resolution clause. Disputes are far cheaper to prevent at the drafting stage than to litigate later."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How are commercial contract disputes resolved?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The contract's dispute-resolution clause usually governs — arbitration if agreed, otherwise commercial suits. Interim relief to protect assets or restrain breaches is available in both routes, and early strategic assessment often opens settlement leverage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What legal compliances apply when starting a business in India?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Choice of entity, incorporation filings, tax and labour registrations, sector-specific licences, and ongoing corporate filings. Getting the founding documents right — charter documents, founder agreements, employment contracts — prevents most early-stage disputes."
+                }
+            }
+        ]
     }
     </script>
 </head>
@@ -614,6 +662,57 @@
                         <li>Infrastructure Developers</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services-overview corporate-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions on corporate, commercial, and insolvency law</p>
+            </div>
+
+            <style>
+                .faq-list { max-width: 800px; margin: 0 auto; }
+                .faq-list details {
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+                    padding: 0.5rem 0;
+                }
+                .faq-list summary {
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    padding: 0.75rem 0;
+                    color: var(--text-primary);
+                    list-style-position: outside;
+                }
+                .faq-list summary:hover { color: var(--primary); }
+                .faq-list p {
+                    color: var(--text-secondary);
+                    line-height: 1.7;
+                    padding: 0 0 1rem 1.25rem;
+                }
+            </style>
+
+            <div class="faq-list">
+                <details>
+                    <summary>What is the Insolvency and Bankruptcy Code and when does it apply?</summary>
+                    <p>The IBC, 2016 provides a time-bound process for resolving corporate insolvency. When a company defaults on a debt of ₹1 crore or more, financial or operational creditors may initiate proceedings before the NCLT. Admission triggers a moratorium and a resolution process that ends in either a revival plan or liquidation.</p>
+                </details>
+                <details>
+                    <summary>What should a shareholders' agreement cover?</summary>
+                    <p>Board composition and governance rights, restrictions on share transfers, exit mechanisms, protections for minority shareholders, deadlock resolution, and a clear dispute-resolution clause. Disputes are far cheaper to prevent at the drafting stage than to litigate later.</p>
+                </details>
+                <details>
+                    <summary>How are commercial contract disputes resolved?</summary>
+                    <p>The contract's dispute-resolution clause usually governs — arbitration if agreed, otherwise commercial suits. Interim relief to protect assets or restrain breaches is available in both routes, and early strategic assessment often opens settlement leverage.</p>
+                </details>
+                <details>
+                    <summary>What legal compliances apply when starting a business in India?</summary>
+                    <p>Choice of entity, incorporation filings, tax and labour registrations, sector-specific licences, and ongoing corporate filings. Getting the founding documents right — charter documents, founder agreements, employment contracts — prevents most early-stage disputes.</p>
+                </details>
             </div>
         </div>
     </section>

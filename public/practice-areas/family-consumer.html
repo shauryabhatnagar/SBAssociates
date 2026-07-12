@@ -24,10 +24,10 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert Family & Consumer Law services in Delhi. Matrimonial disputes, divorce, consumer protection, and family court proceedings. Compassionate legal support from SB & Associates.">
+    <meta name="description" content="Family and consumer law practice at SB & Associates, New Delhi — divorce and matrimonial matters, maintenance, child custody, and consumer complaints including product and service deficiency claims. Sensitive, practical counsel for families across Delhi NCR and India.">
     <meta name="keywords" content="family law Delhi, matrimonial lawyer Delhi, divorce lawyer, consumer law Delhi, consumer forum, family court Delhi">
     
-    <title>Family & Consumer Law - Expert Legal Services | SB & Associates</title>
+    <title>Family & Consumer Dispute Lawyers in Delhi — Divorce, Maintenance, Consumer Claims | SB & Associates</title>
     
     <!-- Geo / Local SEO -->
     <meta name="geo.region" content="IN-DL">
@@ -41,8 +41,8 @@
     <link rel="alternate" hreflang="x-default" href="https://sbassociates.in/practice-areas/family-consumer">
 
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Family & Consumer Law - Expert Legal Services | SB & Associates">
-    <meta property="og:description" content="Expert Family & Consumer Law services in Delhi. Matrimonial disputes, divorce, consumer protection, and family court proceedings. Compassionate legal support from SB & Associates.">
+    <meta property="og:title" content="Family & Consumer Dispute Lawyers in Delhi — Divorce, Maintenance, Consumer Claims | SB & Associates">
+    <meta property="og:description" content="Family and consumer law practice at SB & Associates, New Delhi — divorce and matrimonial matters, maintenance, child custody, and consumer complaints including product and service deficiency claims. Sensitive, practical counsel for families across Delhi NCR and India.">
     <meta property="og:url" content="https://sbassociates.in/practice-areas/family-consumer">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://sbassociates.in/assets/images/office.webp">
@@ -89,7 +89,14 @@
         "name": "SB & Associates - Family & Consumer Law",
         "description": "Expert family law and consumer protection services including matrimonial disputes, divorce proceedings, consumer forum representation, and family court advocacy in Delhi.",
         "serviceType": ["Family Law", "Consumer Law", "Matrimonial Law", "Divorce Law"],
-        "areaServed": "Delhi NCR, India",
+        "areaServed": [
+            { "@type": "City", "name": "New Delhi" },
+            { "@type": "City", "name": "Delhi" },
+            { "@type": "AdministrativeArea", "name": "Delhi NCR" },
+            { "@type": "AdministrativeArea", "name": "South Delhi" },
+            { "@type": "Neighborhood", "name": "Green Park Extension" },
+            { "@type": "Country", "name": "India" }
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Family & Consumer Law Services",
@@ -101,6 +108,47 @@
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consumer Forum Representation"}}
             ]
         }
+    }
+    </script>
+    <!-- Schema Markup: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I file a consumer complaint?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A written complaint is filed before the District, State, or National Commission depending on the value of the claim, generally within two years of the cause of action. E-filing is available, and relief can include refund, replacement, compensation, and litigation costs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What counts as deficiency of service?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Any shortfall in the quality or manner of a service compared to what was promised or reasonably expected — delayed possession by a builder, wrongly repudiated insurance claims, defective goods, or negligent professional services."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the process for divorce by mutual consent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The spouses jointly petition after settling terms on maintenance, custody, and property. The law provides for two motions separated by a cooling-off period, which courts may waive in appropriate cases. It is usually the fastest and least adversarial route."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is maintenance decided?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Courts weigh the income and earning capacity of both spouses, the standard of living during the marriage, and the needs of children. Maintenance can be interim (during proceedings) as well as permanent."
+                }
+            }
+        ]
     }
     </script>
 </head>
@@ -570,6 +618,57 @@
                     <h3>Clear Communication</h3>
                     <p>Complex legal matters explained in simple terms. Regular updates and transparent communication throughout your case help you make informed decisions.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="services-overview family-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions on family, matrimonial, and consumer law matters</p>
+            </div>
+
+            <style>
+                .faq-list { max-width: 800px; margin: 0 auto; }
+                .faq-list details {
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+                    padding: 0.5rem 0;
+                }
+                .faq-list summary {
+                    cursor: pointer;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    padding: 0.75rem 0;
+                    color: var(--text-primary);
+                    list-style-position: outside;
+                }
+                .faq-list summary:hover { color: var(--primary); }
+                .faq-list p {
+                    color: var(--text-secondary);
+                    line-height: 1.7;
+                    padding: 0 0 1rem 1.25rem;
+                }
+            </style>
+
+            <div class="faq-list">
+                <details>
+                    <summary>How do I file a consumer complaint?</summary>
+                    <p>A written complaint is filed before the District, State, or National Commission depending on the value of the claim, generally within two years of the cause of action. E-filing is available, and relief can include refund, replacement, compensation, and litigation costs.</p>
+                </details>
+                <details>
+                    <summary>What counts as deficiency of service?</summary>
+                    <p>Any shortfall in the quality or manner of a service compared to what was promised or reasonably expected — delayed possession by a builder, wrongly repudiated insurance claims, defective goods, or negligent professional services.</p>
+                </details>
+                <details>
+                    <summary>What is the process for divorce by mutual consent?</summary>
+                    <p>The spouses jointly petition after settling terms on maintenance, custody, and property. The law provides for two motions separated by a cooling-off period, which courts may waive in appropriate cases. It is usually the fastest and least adversarial route.</p>
+                </details>
+                <details>
+                    <summary>How is maintenance decided?</summary>
+                    <p>Courts weigh the income and earning capacity of both spouses, the standard of living during the marriage, and the needs of children. Maintenance can be interim (during proceedings) as well as permanent.</p>
+                </details>
             </div>
         </div>
     </section>
